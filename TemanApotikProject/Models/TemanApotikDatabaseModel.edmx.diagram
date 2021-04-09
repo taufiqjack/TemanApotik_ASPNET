@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="94fd2a3022b54b52bbb93bfe1d6558c3" Name="Diagram1" ZoomLevel="64">
+        <EntityTypeShape EntityType="TemanApotikModel.Harga" Width="1.5" PointX="5.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TemanApotikModel.JenisObat" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TemanApotikModel.Obat" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TemanApotikModel.ObatKeluar" Width="1.5" PointX="5.25" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TemanApotikModel.ObatMasuk" Width="1.5" PointX="8.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TemanApotikModel.Pasien" Width="1.5" PointX="5.375" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TemanApotikModel.StokObat" Width="1.5" PointX="2.875" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TemanApotikModel.Supplier" Width="1.5" PointX="6" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TemanApotikModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="TemanApotikModel.FK_Harga_Obat" ManuallyRouted="false" />
+        <AssociationConnector Association="TemanApotikModel.FK_Obat_JenisObat" ManuallyRouted="false" />
+        <AssociationConnector Association="TemanApotikModel.FK_ObatKeluar_Obat" ManuallyRouted="false" />
+        <AssociationConnector Association="TemanApotikModel.FK_ObatMasuk_Obat" ManuallyRouted="false" />
+        <AssociationConnector Association="TemanApotikModel.FK_StokObat_Obat" ManuallyRouted="false" />
+        <AssociationConnector Association="TemanApotikModel.FK_ObatKeluar_Pasien" ManuallyRouted="false" />
+        <AssociationConnector Association="TemanApotikModel.FK_ObatMasuk_Supplier" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,70 @@
+﻿@model TemanApotikProject.Models.ObatKeluar
+
+@{
+    ViewBag.Title = "Hapus";
+}
+
+<h2>Hapus Data Obat Keluar</h2>
+
+<h3>Apakah anda yakin akan menghapus data ini?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Tanggal Keluar")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tgl_Keluar)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Nama Pasien")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pasien.Nama_Pasien)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Nama Obat")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Obat.id_Obat)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Jenis Obat")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_Jenis_Obat)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Jumlah Keluar")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Jumlah_Keluar)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Total Harga")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Total_Harga)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Hapus" class="btn btn-default" /> |
+            @Html.ActionLink("Kembali ke List", "Index")
+        </div>
+    }
+</div>

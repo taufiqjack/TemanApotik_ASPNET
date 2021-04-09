@@ -1,0 +1,25 @@
+﻿@model TemanApotikProject.Models.JenisObat
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detail Jenis Obat</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Jenis Obat")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Jenis_Obat)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_Jenis_Obat }) |
+    @Html.ActionLink("Kembali ke List", "Index")
+</p>

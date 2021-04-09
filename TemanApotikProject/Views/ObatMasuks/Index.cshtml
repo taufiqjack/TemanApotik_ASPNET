@@ -1,0 +1,63 @@
+﻿@model IEnumerable<TemanApotikProject.Models.ObatMasuk>
+
+@{
+    ViewBag.Title = "Daftar Obat Masuk";
+}
+
+<h2>Daftar Obat Masuk</h2>
+
+<p>
+    @Html.ActionLink("Buat Baru", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Tanggal Masuk")
+        </th>
+        <th>
+            @Html.DisplayName("Nama Supplier")
+        </th>
+        <th>
+            @Html.DisplayName("Nama Obat")
+        </th>
+        <th>
+            @Html.DisplayName("Jenis Obat")
+        </th>
+        <th>
+            @Html.DisplayName("Jumlah Masuk")
+        </th>
+        <th>
+            @Html.DisplayName("Harga Beli")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tgl_Masuk)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Supplier.id_Supplier)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Obat.id_Obat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_Jenis_Obat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Jumlah_Masuk)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Harga_Beli)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.id_Transaksi_Masuk }) |
+            @Html.ActionLink("Detail", "Details", new { id = item.id_Transaksi_Masuk }) |
+            @Html.ActionLink("Hapus", "Delete", new { id = item.id_Transaksi_Masuk })
+        </td>
+    </tr>
+}
+
+</table>

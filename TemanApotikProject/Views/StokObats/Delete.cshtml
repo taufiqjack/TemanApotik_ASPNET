@@ -1,0 +1,47 @@
+﻿@model TemanApotikProject.Models.StokObat
+
+@{
+    ViewBag.Title = "Hapus Stok";
+}
+
+<h2>Hapus Stok Obat</h2>
+
+<h3>Apakah anda yakin akan menghapus data ini?</h3>
+<div>   
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Nama Obat")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Obat.id_Obat)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Jenis Obat")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_Jenis_Obat)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Stock In Hands")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stock_In_Hand)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Hapus" class="btn btn-default" /> |
+            @Html.ActionLink("Kembali ke List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,56 @@
+﻿@model TemanApotikProject.Models.Harga
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detail Harga Obat</h2>
+
+<div>    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Nama Obat")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Obat.id_Obat)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Jenis Obat")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_Jenis_Obat)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Harga Awal")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Harga_Awal)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Diskon")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Diskon)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Harga Akhir")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Harga_Akhir)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_Harga }) |
+    @Html.ActionLink("Kembali ke List", "Index")
+</p>

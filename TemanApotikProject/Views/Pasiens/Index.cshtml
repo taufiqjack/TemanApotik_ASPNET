@@ -1,0 +1,45 @@
+﻿@model IEnumerable<TemanApotikProject.Models.Pasien>
+
+@{
+    ViewBag.Title = "Daftar Pasien";
+}
+
+<h2>Daftar Pasien</h2>
+
+<p>
+    @Html.ActionLink("Buat Baru", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Nama Pasien")
+        </th>
+        <th>
+            @Html.DisplayName("Alamat Pasien")
+        </th>
+        <th>
+            @Html.DisplayName("Diagnosa Pasien")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nama_Pasien)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Alamat_Pasien)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Diagnosa_Penyakit)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_Pasien }) |
+            @Html.ActionLink("Detail", "Details", new { id=item.id_Pasien }) |
+            @Html.ActionLink("Hapus", "Delete", new { id=item.id_Pasien })
+        </td>
+    </tr>
+}
+
+</table>

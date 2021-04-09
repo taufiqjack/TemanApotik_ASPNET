@@ -1,0 +1,64 @@
+﻿@model TemanApotikProject.Models.ObatMasuk
+
+@{
+    ViewBag.Title = "Detail";
+}
+
+<h2>Detail Data Obat Masuk</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Tanggal Masuk")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tgl_Masuk)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Nama Supplier")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Supplier.id_Supplier)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Nama Obat")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Obat.id_Obat)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Jenis Obat")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_Jenis_Obat)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Jumlah Masuk")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Jumlah_Masuk)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Harga Beli")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Harga_Beli)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_Transaksi_Masuk }) |
+    @Html.ActionLink("Kembali ke List", "Index")
+</p>

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<TemanApotikProject.Models.Supplier>
+
+@{
+    ViewBag.Title = "Daftar Supplier";
+}
+
+<h2>Daftar Supplier</h2>
+
+<p>
+    @Html.ActionLink("Buat Baru", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Nama Supplier")
+        </th>
+        <th>
+            @Html.DisplayName("Jenis Obat")
+        </th>
+        <th>
+            @Html.DisplayName("Alamat Supplier")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nama_Supplier)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_Jenis_Obat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Alamat_Supplier)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_Supplier }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_Supplier }) |
+            @Html.ActionLink("Hapus", "Delete", new { id=item.id_Supplier })
+        </td>
+    </tr>
+}
+
+</table>

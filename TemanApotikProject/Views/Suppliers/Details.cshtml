@@ -1,0 +1,41 @@
+﻿@model TemanApotikProject.Models.Supplier
+
+@{
+    ViewBag.Title = "Detail";
+}
+
+<h2>Detail Supplier</h2>
+
+<div>    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Nama Supplier")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nama_Supplier)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Jenis Obat")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_Jenis_Obat)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Alamat Supplier")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Alamat_Supplier)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_Supplier }) |
+    @Html.ActionLink("Kembali ke List", "Index")
+</p>

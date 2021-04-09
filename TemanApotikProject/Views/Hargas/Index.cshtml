@@ -1,0 +1,57 @@
+﻿@model IEnumerable<TemanApotikProject.Models.Harga>
+
+@{
+    ViewBag.Title = "Daftar Harga";
+}
+
+<h2>Daftar Harga Obat</h2>
+
+<p>
+    @Html.ActionLink("Buat Baru", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Nama Obat")
+        </th>
+        <th>
+            @Html.DisplayName("Jenis Obat")
+        </th>
+        <th>
+            @Html.DisplayName("Harga Awal")
+        </th>
+        <th>
+            @Html.DisplayName("Diskon")
+        </th>
+        <th>
+            @Html.DisplayName("Harga Akhir")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Obat.id_Obat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_Jenis_Obat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Harga_Awal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Diskon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Harga_Akhir)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.id_Harga }) |
+            @Html.ActionLink("Detail", "Details", new { id = item.id_Harga }) |
+            @Html.ActionLink("Hapus", "Delete", new { id = item.id_Harga })
+        </td>
+    </tr>
+}
+
+</table>

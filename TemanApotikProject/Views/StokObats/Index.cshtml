@@ -1,0 +1,45 @@
+﻿@model IEnumerable<TemanApotikProject.Models.StokObat>
+
+@{
+    ViewBag.Title = "Daftar Stok Obat";
+}
+
+<h2>Daftar Stok Obat</h2>
+
+<p>
+    @Html.ActionLink("Buat Baru", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Nama Obat")
+        </th>
+        <th>
+            @Html.DisplayName("Jenis Obat")
+        </th>
+        <th>
+            @Html.DisplayName("Stock In Hands")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_Jenis_Obat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stock_In_Hand)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Obat.Kode_Obat)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_Stok_Obat }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_Stok_Obat }) |
+            @Html.ActionLink("Hapus", "Delete", new { id=item.id_Stok_Obat })
+        </td>
+    </tr>
+}
+
+</table>

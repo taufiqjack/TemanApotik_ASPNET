@@ -1,0 +1,40 @@
+﻿@model TemanApotikProject.Models.Pasien
+
+@{
+    ViewBag.Title = "Detail";
+}
+
+<h2>Detail Pasien</h2>
+
+<div>    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Nama Pasien")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nama_Pasien)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Alamat Pasien")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Alamat_Pasien)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Diagnosa Penyakit")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Diagnosa_Penyakit)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_Pasien }) |
+    @Html.ActionLink("Kembali ke List", "Index")
+</p>
